@@ -18,11 +18,11 @@ class ViewController: UIViewController {
             let dictionaryValue = snapshot.value as? [String: String]
             let stringValue = dictionaryValue?["name"]
             Listener.shared.dataString = stringValue
-            NotificationCenter.default.post(name: .testNotification, object: nil)
+            NotificationCenter.default.post(name: .testKey, object: nil)
         }
     }
 }
 
 extension Notification.Name {
-    static let testNotification = Notification.Name.init(rawValue: "testValueNotification")
+    static let testKey = Notification.Name.init(rawValue: "testValueNotification")
 }

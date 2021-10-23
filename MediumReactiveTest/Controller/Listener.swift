@@ -13,7 +13,7 @@ class Listener {
     var dataString: String?
     
     private init() {
-        NotificationCenter.default.addObserver(forName: .testNotification, object: nil, queue: .main) { [weak self] _ in
+        NotificationCenter.default.addObserver(forName: .testKey, object: nil, queue: .main) { [weak self] _ in
             guard let self = self else { return }
             print("test data received: \(self.dataString)")
         }
